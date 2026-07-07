@@ -8,16 +8,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Show files
+      - name: Debug: show workspace files
         run: |
+          echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
           pwd
           ls -la
-          find . -maxdepth 2 -type f
+          echo "----- find monitor.py -----"
+          find . -maxdepth 3 -type f -name "monitor.py" -print
+          echo "----- list workflows -----"
+          find .github/workflows -maxdepth 2 -type f -print || true
 
       - name: Set up Python
         uses: actions/setup-python@v5
