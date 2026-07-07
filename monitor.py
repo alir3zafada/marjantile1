@@ -1,8 +1,8 @@
 import os
 import requests
 
-TOKEN = os.environ.get("8885854287:AAHV0CqKVPJxmf9pbN01ZORqSyZ4JKzbXo4")
-CHAT_ID = os.environ.get("100848133")
+TOKEN = os.environ.get("TOKEN")
+CHAT_ID = os.environ.get("CHAT_ID")
 
 URLS_TO_CHECK = [
     "https://www.marjantileco.com",
