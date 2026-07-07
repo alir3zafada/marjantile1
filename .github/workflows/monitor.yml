@@ -25,5 +25,4 @@ jobs:
         env:
           TOKEN: ${{ secrets.TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
-        working-directory: ${{ github.workspace }}
         run: python monitor.py
